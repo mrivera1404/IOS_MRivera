@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490DD592243841AC00B46444 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD590243841AC00B46444 /* ItemCell.swift */; };
+		490DD593243841AC00B46444 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490DD591243841AC00B46444 /* ItemCell.xib */; };
+		490DD59524384AB600B46444 /* Date+formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DD59424384AB600B46444 /* Date+formatter.swift */; };
+		4953A1C0244CF5210092E675 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953A1BF244CF5210092E675 /* Item.swift */; };
+		4953A1C2244D28530092E675 /* Product .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4953A1C1244D28530092E675 /* Product .swift */; };
 		498D61B4242F065F0038F997 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D61B3242F065F0038F997 /* AddProductViewController.swift */; };
 		49AC7FF8242DC387005B69DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC7FF7242DC387005B69DE /* AppDelegate.swift */; };
 		49AC7FFA242DC387005B69DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC7FF9242DC387005B69DE /* SceneDelegate.swift */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490DD590243841AC00B46444 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		490DD591243841AC00B46444 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		490DD59424384AB600B46444 /* Date+formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+formatter.swift"; sourceTree = "<group>"; };
+		4953A1BF244CF5210092E675 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4953A1C1244D28530092E675 /* Product .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product .swift"; sourceTree = "<group>"; };
 		498D61B3242F065F0038F997 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		49AC7FF4242DC386005B69DE /* Tarea#3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tarea#3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AC7FF7242DC387005B69DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +94,7 @@
 		498D61B5242F06F60038F997 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				490DD59424384AB600B46444 /* Date+formatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -91,6 +102,8 @@
 		498D61B6242F071D0038F997 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				490DD590243841AC00B46444 /* ItemCell.swift */,
+				490DD591243841AC00B46444 /* ItemCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -98,6 +111,8 @@
 		498D61B7242F07380038F997 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4953A1C1244D28530092E675 /* Product .swift */,
+				4953A1BF244CF5210092E675 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490DD593243841AC00B46444 /* ItemCell.xib in Resources */,
 				49AC8004242DC387005B69DE /* LaunchScreen.storyboard in Resources */,
 				49AC8001242DC387005B69DE /* Assets.xcassets in Resources */,
 				49AC7FFF242DC387005B69DE /* Main.storyboard in Resources */,
@@ -270,8 +286,12 @@
 			files = (
 				49AC7FFC242DC387005B69DE /* ListProductsViewController.swift in Sources */,
 				49AC7FF8242DC387005B69DE /* AppDelegate.swift in Sources */,
+				4953A1C2244D28530092E675 /* Product .swift in Sources */,
 				498D61B4242F065F0038F997 /* AddProductViewController.swift in Sources */,
 				49AC7FFA242DC387005B69DE /* SceneDelegate.swift in Sources */,
+				4953A1C0244CF5210092E675 /* Item.swift in Sources */,
+				490DD59524384AB600B46444 /* Date+formatter.swift in Sources */,
+				490DD592243841AC00B46444 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

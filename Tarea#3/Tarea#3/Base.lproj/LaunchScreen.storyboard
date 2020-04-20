@@ -7,14 +7,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Products View Controller-->
+        <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" customClass="ListProductsViewController" customModule="Tarea_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="7fc-3O-qzX">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="D2P-Ve-uuG"/>
+                                    <constraint firstAttribute="width" constant="300" id="XW6-Vx-Dpy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7fc-3O-qzX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DR4-ay-7Ta"/>
+                            <constraint firstItem="7fc-3O-qzX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ciL-fr-7fb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,20 +35,8 @@
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
-        <!--Add Product View Controller-->
-        <scene sceneID="pPA-tA-FdW">
-            <objects>
-                <viewController id="WjK-FU-xK9" customClass="AddProductViewController" customModule="Tarea_3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r6L-jj-GYT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="JkP-rH-buc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vcR-oC-uXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="783" y="375"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="LaunchScreen" width="512" height="512"/>
+    </resources>
 </document>
