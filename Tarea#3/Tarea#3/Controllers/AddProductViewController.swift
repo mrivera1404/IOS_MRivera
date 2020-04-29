@@ -8,8 +8,16 @@
 
 import UIKit
 
-class AddProductViewController: UIViewController {
+protocol AddProductViewControllerProtocol: class {
+    func addItem(item: Item)
+}
 
+class AddProductViewController: UIViewController {
+    
+    weak var delegate: AddProductViewControllerProtocol?
+
+    var item: Item?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

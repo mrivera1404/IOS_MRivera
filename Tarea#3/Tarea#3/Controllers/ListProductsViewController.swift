@@ -19,11 +19,25 @@ class ListProductsViewController: UIViewController {
         super.viewDidLoad()
         registerCustomCell()
         createItems()
+        addProductNavigationButton()
     }
 
     func registerCustomCell() {
         let nib = UINib(nibName: itemTableViewCellIdentifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: itemTableViewCellIdentifier)
+    }
+    //Btn Add
+    func addProductNavigationButton() {
+        let addNavigationButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addProductAction(sender:)))
+        navigationItem.rightBarButtonItem = addNavigationButton
+    }
+    
+    //Funtion that call the add product controller
+    @objc func addProductAction(sender: UIBarButtonItem) {
+        if let addProductViewController = storyboard?.instantiateViewController(identifier: "AddProductViewController") as? AddProductViewController {
+            addProductViewController.delegate = self
+            navigationController?.pushViewController(addProductViewController, animated: true)
+        }
     }
     
     func createItems(){
@@ -54,5 +68,34 @@ extension ListProductsViewController: UITableViewDataSource, UITableViewDelegate
         cell.setupCell(item: items[indexPath.row])
         
         return cell
+    }
+//    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//           return 100
+//       }
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let item = items[indexPath.row] as Item?, let addProductViewController = storyboard?.instantiateViewController(identifier: "AddProductViewController") as? AddProductViewController{
+//                addProductViewController.item = item
+//                navigationController?.pushViewController(addProductViewController, animated: true)
+//        }
+//        
+//    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            items.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
+}
+
+extension ListProductsViewController: AddProductViewControllerProtocol {
+    func addItem(item: Item) {
+        items.append(item)
+        navigationController?.popViewController(animated: true)
+        tableView.reloadData()
     }
 }
